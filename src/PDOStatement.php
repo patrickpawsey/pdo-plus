@@ -19,7 +19,7 @@ class PDOStatement
      * For binding simulations purposes.
      * @var array
      */
-    protected $bindings = [];
+    protected $bindings = array();
 
     /**
      * Sets the PDO logging class instance and prepared statement.

@@ -63,10 +63,10 @@ class PDO extends \PDO
      */
     public function addLog($statement, $time)
     {
-        $query = [
+        $query = array(
             'statement' => $statement,
             'time' => $time
-        ];
+        );
         array_push($this->log, $query);
     }
 

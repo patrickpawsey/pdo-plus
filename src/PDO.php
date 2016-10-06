@@ -7,7 +7,7 @@ class PDO extends \PDO
      * Logged queries.
      * @var array
      */
-    protected $log = [];
+    protected $log = array();
 
     /**
      * Relay all calls.
@@ -28,7 +28,7 @@ class PDO extends \PDO
     /**
      * @see \PDO::prepare
      */
-    public function prepare($statement, $driver_options = [])
+    public function prepare($statement, $driver_options = array())
     {
         $PDOStatement = parent::prepare($statement, $driver_options);
         $new = new \Filisko\PDOplus\PDOStatement($this, $PDOStatement);
